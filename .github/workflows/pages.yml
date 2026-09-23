@@ -25,12 +25,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Copiar site atual
+      - name: Montar arquivos do site
         run: |
-          mkdir -p _site mirror
-          wget             --mirror             --convert-links             --adjust-extension             --page-requisites             --no-parent             --domains casas-alta-qualidade.agenciaauron.chatgpt.site             --directory-prefix mirror             https://casas-alta-qualidade.agenciaauron.chatgpt.site/
-          cp -a mirror/casas-alta-qualidade.agenciaauron.chatgpt.site/. _site/
-          touch _site/.nojekyll
+          mkdir -p _site
+          cat .site/part-* > site.b64
+          base64 --decode site.b64 > site.tar.gz
+          tar -xzf site.tar.gz -C _site
+          test -f _site/index.html
 
       - name: Configurar GitHub Pages
         uses: actions/configure-pages@v5
