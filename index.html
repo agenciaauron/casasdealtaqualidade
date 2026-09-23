@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rapidez, Custo e Qualidade | Construção industrializada em concreto</title>
+  <meta name="description" content="Casas, escritórios e peças especiais em concreto industrializado, com obra limpa, prazo reduzido e alto desempenho.">
+  <meta name="theme-color" content="#0c223a">
+  <link rel="preconnect" href="https://static.wixstatic.com">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230c223a'/%3E%3Cpath d='M14 32 32 16l18 16v18H38V37H26v13H14V32Z' fill='none' stroke='%23c7894b' stroke-width='5' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap');
+
+    :root {
+      --navy: #0c223a;
+      --navy-2: #123453;
+      --copper: #c7894b;
+      --copper-dark: #a96b31;
+      --ink: #17212b;
+      --muted: #5d6872;
+      --paper: #f5f3ef;
+      --white: #ffffff;
+      --line: rgba(12, 34, 58, .13);
+      --shadow: 0 24px 70px rgba(12, 34, 58, .14);
+      --radius: 24px;
+      --max: 1180px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--white);
+      font: 400 1rem/1.65 "DM Sans", sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { display: block; width: 100%; }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; }
+    .container { width: min(calc(100% - 40px), var(--max)); margin-inline: auto; }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0 0 18px;
+      color: var(--copper-dark);
+      font-size: .78rem;
+      font-weight: 800;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+    .eyebrow::before { content: ""; width: 28px; height: 2px; background: currentColor; }
+    h1, h2, h3 { margin: 0; font-family: "Manrope", sans-serif; line-height: 1.1; letter-spacing: -.035em; }
+    h1 { font-size: clamp(2.75rem, 6vw, 5.35rem); }
+    h2 { font-size: clamp(2rem, 4vw, 3.55rem); }
+    h3 { font-size: 1.25rem; }
+    p { margin: 0; }
+
+    .site-header {
+      position: sticky;
+      z-index: 50;
+      top: 0;
+      border-bottom: 1px solid rgba(255, 255, 255, .09);
+      color: var(--white);
+      background: rgba(12, 34, 58, .94);
+      backdrop-filter: blur(18px);
+    }
+    .nav { min-height: 78px; display: flex; align-items: center; justify-content: space-between; gap: 28px; }
+    .brand { display: flex; align-items: center; gap: 12px; font-family: "Manrope", sans-serif; font-weight: 800; line-height: 1.08; }
+    .brand-mark { width: 42px; height: 42px; color: var(--copper); flex: 0 0 auto; }
+    .brand span { display: block; font-size: .98rem; }
+    .nav-links { display: flex; align-items: center; gap: 26px; font-size: .9rem; font-weight: 600; }
+    .nav-links a { color: rgba(255,255,255,.78); transition: color .2s ease; }
+    .nav-links a:hover, .nav-links a:focus-visible { color: var(--white); }
+    .nav-cta { padding: 11px 17px; border: 1px solid rgba(255,255,255,.22); border-radius: 999px; color: var(--white) !important; }
+    .menu-button { display: none; border: 0; background: transparent; color: white; padding: 8px; cursor: pointer; }
+    .menu-button svg { display: block; width: 26px; height: 26px; }
+
+    .hero {
+      overflow: hidden;
+      color: var(--white);
+      background: var(--navy);
+    }
+    .hero-grid { min-height: 720px; display: grid; grid-template-columns: .93fr 1.07fr; align-items: stretch; }
+    .hero-copy { position: relative; z-index: 2; padding: 108px 72px 96px max(20px, calc((100vw - var(--max)) / 2)); }
+    .hero-copy::after { content: ""; position: absolute; right: -220px; bottom: 56px; width: 420px; height: 420px; border: 1px solid rgba(255,255,255,.08); border-radius: 50%; pointer-events: none; }
+    .hero .eyebrow { color: #e1aa73; }
+    .hero h1 { max-width: 720px; }
+    .hero h1 em { color: #e1aa73; font-style: normal; }
+    .hero-lead { max-width: 610px; margin-top: 26px; color: rgba(255,255,255,.76); font-size: 1.13rem; }
+    .hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; margin-top: 34px; }
+    .button { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 52px; padding: 0 22px; border-radius: 999px; font-weight: 700; transition: transform .2s ease, background .2s ease; }
+    .button:hover { transform: translateY(-2px); }
+    .button-primary { background: var(--copper); color: #15110d; }
+    .button-primary:hover { background: #d99b5f; }
+    .button-ghost { border: 1px solid rgba(255,255,255,.24); color: var(--white); }
+    .button svg { width: 18px; height: 18px; }
+    .hero-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; max-width: 620px; margin-top: 64px; background: rgba(255,255,255,.12); }
+    .hero-stat { padding: 20px 20px 20px 0; background: var(--navy); }
+    .hero-stat + .hero-stat { padding-left: 20px; }
+    .hero-stat strong { display: block; font: 800 1.02rem/1.2 "Manrope", sans-serif; }
+    .hero-stat span { display: block; margin-top: 6px; color: rgba(255,255,255,.6); font-size: .84rem; }
+    .hero-visual { position: relative; min-height: 620px; }
+    .hero-visual img { height: 100%; object-fit: cover; }
+    .hero-visual::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(12,34,58,.42), transparent 28%), linear-gradient(0deg, rgba(12,34,58,.2), transparent 40%); }
+    .hero-note { position: absolute; z-index: 2; right: 34px; bottom: 34px; width: min(330px, calc(100% - 68px)); padding: 19px 22px; border: 1px solid rgba(255,255,255,.22); border-radius: 18px; background: rgba(12,34,58,.82); backdrop-filter: blur(14px); }
+    .hero-note strong { display: block; font: 700 .94rem/1.3 "Manrope", sans-serif; }
+    .hero-note span { display: block; margin-top: 5px; color: rgba(255,255,255,.68); font-size: .82rem; }
+
+    .services { padding: 108px 0; background: var(--paper); }
+    .section-heading { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: end; margin-bottom: 48px; }
+    .section-heading p { max-width: 560px; color: var(--muted); font-size: 1.05rem; }
+    .service-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .service-card { position: relative; min-height: 340px; overflow: hidden; padding: 30px; border-radius: var(--radius); color: var(--white); background: var(--navy); }
+    .service-card img { position: absolute; inset: 0; height: 100%; object-fit: cover; opacity: .38; transition: transform .55s ease, opacity .55s ease; }
+    .service-card::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(12,34,58,.05), rgba(12,34,58,.94)); }
+    .service-card:hover img { transform: scale(1.035); opacity: .5; }
+    .service-content { position: absolute; z-index: 2; right: 30px; bottom: 28px; left: 30px; }
+    .service-number { display: inline-flex; margin-bottom: 18px; color: #e1aa73; font-size: .78rem; font-weight: 800; letter-spacing: .14em; }
+    .service-card p { margin-top: 10px; color: rgba(255,255,255,.7); font-size: .92rem; }
+
+    .system { padding: 110px 0; }
+    .system-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 86px; align-items: center; }
+    .image-stack { position: relative; min-height: 610px; }
+    .image-stack .main-image { position: absolute; top: 0; left: 0; width: 78%; height: 500px; object-fit: cover; border-radius: 4px 28px 4px 28px; box-shadow: var(--shadow); }
+    .image-stack .small-image { position: absolute; right: 0; bottom: 0; width: 54%; height: 290px; object-fit: cover; border: 10px solid var(--white); border-radius: 22px 4px 22px 4px; box-shadow: var(--shadow); }
+    .system-copy > p { margin-top: 24px; color: var(--muted); font-size: 1.05rem; }
+    .benefit-list { display: grid; grid-template-columns: 1fr 1fr; gap: 24px 30px; margin-top: 38px; }
+    .benefit { padding-top: 17px; border-top: 1px solid var(--line); }
+    .benefit strong { display: flex; align-items: center; gap: 10px; font: 700 1rem/1.25 "Manrope", sans-serif; }
+    .benefit strong span { display: grid; place-items: center; width: 27px; height: 27px; border-radius: 50%; background: #f4e4d4; color: var(--copper-dark); font-size: .78rem; }
+    .benefit p { margin-top: 8px; color: var(--muted); font-size: .9rem; line-height: 1.5; }
+
+    .performance { padding: 110px 0; color: var(--white); background: var(--navy); }
+    .performance .eyebrow { color: #e1aa73; }
+    .performance-top { display: grid; grid-template-columns: 1.1fr .9fr; gap: 80px; align-items: end; }
+    .performance-top p { color: rgba(255,255,255,.67); }
+    .performance-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; margin-top: 54px; border: 1px solid rgba(255,255,255,.12); background: rgba(255,255,255,.12); }
+    .performance-card { min-height: 230px; padding: 30px; background: var(--navy); }
+    .performance-icon { width: 42px; height: 42px; color: #e1aa73; }
+    .performance-card h3 { margin-top: 24px; }
+    .performance-card p { margin-top: 11px; color: rgba(255,255,255,.62); font-size: .9rem; }
+
+    .projects { padding: 110px 0; background: var(--paper); }
+    .project-grid { display: grid; grid-template-columns: 1.2fr .8fr; grid-template-rows: 260px 260px; gap: 18px; margin-top: 52px; }
+    .project { position: relative; overflow: hidden; border-radius: 20px; background: #d7d7d7; }
+    .project:first-child { grid-row: 1 / 3; }
+    .project img { height: 100%; object-fit: cover; transition: transform .5s ease; }
+    .project:hover img { transform: scale(1.025); }
+    .project-label { position: absolute; bottom: 18px; left: 18px; padding: 8px 12px; border-radius: 999px; color: var(--white); background: rgba(12,34,58,.82); backdrop-filter: blur(10px); font-size: .78rem; font-weight: 700; }
+
+    .testimonials { padding: 100px 0; }
+    .quote-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 48px; }
+    .quote { display: flex; flex-direction: column; min-height: 290px; padding: 30px; border: 1px solid var(--line); border-radius: 20px; }
+    .quote-mark { color: var(--copper); font: 700 3.5rem/1 Georgia, serif; }
+    .quote p { color: #38434e; }
+    .quote footer { margin-top: auto; padding-top: 24px; font: 700 .92rem/1.3 "Manrope", sans-serif; }
+
+    .director { padding: 110px 0; background: #edf0f2; }
+    .director-grid { display: grid; grid-template-columns: .72fr 1.28fr; gap: 82px; }
+    .director-card { align-self: start; padding: 34px; border-radius: 24px; color: var(--white); background: var(--navy); }
+    .director-monogram { display: grid; place-items: center; width: 80px; height: 80px; border: 1px solid rgba(255,255,255,.22); border-radius: 50%; color: #e1aa73; font: 700 1.35rem/1 "Manrope", sans-serif; }
+    .director-card h3 { margin-top: 24px; font-size: 1.55rem; }
+    .director-card p { margin-top: 8px; color: rgba(255,255,255,.65); }
+    .credential-list { display: grid; gap: 17px; margin-top: 34px; }
+    .credential { padding: 22px 0; border-bottom: 1px solid var(--line); }
+    .credential:first-child { padding-top: 0; }
+    .credential strong { display: block; font: 700 1.05rem/1.3 "Manrope", sans-serif; }
+    .credential p { margin-top: 8px; color: var(--muted); font-size: .94rem; }
+    .brand-history { margin-top: 76px; padding-top: 60px; border-top: 1px solid var(--line); }
+    .brand-history-heading { display: flex; align-items: end; justify-content: space-between; gap: 40px; margin-bottom: 34px; }
+    .brand-history-heading h3 { max-width: 680px; font-size: clamp(1.55rem, 3vw, 2.25rem); }
+    .brand-history-heading p { max-width: 420px; color: var(--muted); font-size: .94rem; }
+    .logo-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; }
+    .logo-card { min-height: 130px; display: grid; place-items: center; padding: 24px; border: 1px solid var(--line); border-radius: 18px; background: var(--white); transition: transform .2s ease, box-shadow .2s ease; }
+    .logo-card:hover { transform: translateY(-3px); box-shadow: 0 14px 34px rgba(12,34,58,.08); }
+    .logo-card img { width: auto; max-width: 100%; max-height: 78px; object-fit: contain; }
+
+    .contact { padding: 110px 0; color: var(--white); background: var(--navy); }
+    .contact-box { display: grid; grid-template-columns: 1.15fr .85fr; gap: 72px; align-items: center; }
+    .contact .eyebrow { color: #e1aa73; }
+    .contact-copy > p { max-width: 650px; margin-top: 24px; color: rgba(255,255,255,.68); font-size: 1.06rem; }
+    .question-list { display: grid; gap: 0; padding: 30px; border: 1px solid rgba(255,255,255,.12); border-radius: 22px; background: rgba(255,255,255,.04); }
+    .question-list span { padding: 13px 0; border-bottom: 1px solid rgba(255,255,255,.1); color: rgba(255,255,255,.74); }
+    .question-list span:last-child { border-bottom: 0; }
+    .contact-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 32px; }
+
+    .site-footer { padding: 26px 0; color: rgba(255,255,255,.58); background: #071626; font-size: .84rem; }
+    .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .footer-inner a { color: var(--white); }
+    .whatsapp-float { position: fixed; z-index: 60; right: 22px; bottom: 22px; display: grid; place-items: center; width: 58px; height: 58px; border-radius: 50%; color: white; background: #25d366; box-shadow: 0 14px 35px rgba(0,0,0,.22); transition: transform .2s ease; }
+    .whatsapp-float:hover { transform: translateY(-3px) scale(1.02); }
+    .whatsapp-float svg { width: 27px; height: 27px; }
+
+    .reveal { opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; }
+    .reveal.visible { opacity: 1; transform: none; }
+
+    @media (max-width: 980px) {
+      .nav-links { position: absolute; top: 78px; right: 0; left: 0; display: none; flex-direction: column; align-items: stretch; gap: 0; padding: 16px 20px 24px; background: var(--navy); box-shadow: 0 18px 30px rgba(0,0,0,.16); }
+      .nav-links.open { display: flex; }
+      .nav-links a { padding: 13px 0; border-bottom: 1px solid rgba(255,255,255,.08); }
+      .nav-links .nav-cta { margin-top: 12px; text-align: center; }
+      .menu-button { display: block; }
+      .hero-grid { grid-template-columns: 1fr; }
+      .hero-copy { padding: 76px 32px 54px; }
+      .hero-visual { min-height: 520px; }
+      .section-heading, .system-grid, .performance-top, .director-grid, .contact-box { grid-template-columns: 1fr; gap: 38px; }
+      .service-grid { grid-template-columns: 1fr 1fr; }
+      .service-card:last-child { grid-column: 1 / 3; }
+      .performance-grid { grid-template-columns: 1fr 1fr; }
+      .quote-grid { grid-template-columns: 1fr; }
+      .quote { min-height: 220px; }
+      .brand-history-heading { align-items: flex-start; flex-direction: column; gap: 14px; }
+      .logo-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    @media (max-width: 680px) {
+      .container { width: min(calc(100% - 28px), var(--max)); }
+      .nav { min-height: 70px; }
+      .nav-links { top: 70px; }
+      .brand-mark { width: 36px; height: 36px; }
+      .brand span { font-size: .86rem; }
+      .hero-copy { padding: 60px 18px 44px; }
+      .hero-actions { align-items: stretch; flex-direction: column; }
+      .button { width: 100%; }
+      .hero-stats { grid-template-columns: 1fr; gap: 0; margin-top: 42px; background: transparent; }
+      .hero-stat, .hero-stat + .hero-stat { padding: 15px 0; border-top: 1px solid rgba(255,255,255,.12); }
+      .hero-visual { min-height: 430px; }
+      .hero-note { right: 18px; bottom: 18px; width: calc(100% - 36px); }
+      .services, .system, .performance, .projects, .testimonials, .director, .contact { padding: 78px 0; }
+      .section-heading { margin-bottom: 34px; }
+      .service-grid, .performance-grid, .benefit-list { grid-template-columns: 1fr; }
+      .service-card, .service-card:last-child { grid-column: auto; min-height: 300px; }
+      .image-stack { min-height: 470px; }
+      .image-stack .main-image { width: 88%; height: 390px; }
+      .image-stack .small-image { width: 60%; height: 220px; }
+      .performance-card { min-height: auto; }
+      .project-grid { grid-template-columns: 1fr; grid-template-rows: 380px 230px 230px; }
+      .project:first-child { grid-row: auto; }
+      .director-card { padding: 28px; }
+      .brand-history { margin-top: 56px; padding-top: 45px; }
+      .logo-grid { grid-template-columns: repeat(2, 1fr); }
+      .logo-card { min-height: 108px; padding: 19px; }
+      .footer-inner { align-items: flex-start; flex-direction: column; }
+      .whatsapp-float { right: 14px; bottom: 14px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+      .reveal { opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="#inicio" aria-label="Rapidez, Custo e Qualidade, início">
+        <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true"><path d="M10 31 32 11l22 20v23H39V37H25v17H10V31Z" fill="none" stroke="currentColor" stroke-width="4.5" stroke-linejoin="round"/><path d="M20 30 32 19l12 11" fill="none" stroke="currentColor" stroke-width="4.5" stroke-linecap="round"/></svg>
+        <span>Rapidez, Custo<br>e Qualidade</span>
+      </a>
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Abrir menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+      <nav class="nav-links" id="nav-links" aria-label="Navegação principal">
+        <a href="./casas/">Casas</a>
+        <a href="#sistema">Sistema</a>
+        <a href="#desempenho">Desempenho</a>
+        <a href="#obras">Obras</a>
+        <a href="#diretor">Diretor técnico</a>
+        <a class="nav-cta" href="#contato">Fale conosco</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Construção industrializada em concreto</p>
+          <h1>Obras mais rápidas, precisas e feitas para <em>durar.</em></h1>
+          <p class="hero-lead">Casas, escritórios e peças especiais com painéis e lajes de concreto industrializados. Menos desperdício, mais controle de prazo e qualidade em cada etapa.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="https://wa.me/5543999936431?text=Ol%C3%A1%2C%20gostaria%20de%20conversar%20sobre%20meu%20projeto." target="_blank" rel="noopener">Conversar sobre meu projeto
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12h14m-6-6 6 6-6 6"/></svg>
+            </a>
+            <a class="button button-ghost" href="#sistema">Conhecer o sistema</a>
+          </div>
+          <div class="hero-stats" aria-label="Principais vantagens">
+            <div class="hero-stat"><strong>Prazo reduzido</strong><span>Produção e obra avançam em paralelo</span></div>
+            <div class="hero-stat"><strong>Orçamento preciso</strong><span>Mais previsibilidade para decidir</span></div>
+            <div class="hero-stat"><strong>Alta durabilidade</strong><span>Concreto de elevado desempenho</span></div>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <img src="https://static.wixstatic.com/media/05cb94_4dfd5ddfa0a74dcc9cb8c624dc2f2adc~mv2.jpg/v1/fill/w_1400,h_1100,al_c,q_90,enc_auto/05cb94_4dfd5ddfa0a74dcc9cb8c624dc2f2adc~mv2.jpg" alt="Projeto de casa contemporânea construída em concreto">
+          <div class="hero-note"><strong>Engenharia que simplifica a obra</strong><span>Do projeto à montagem, com acompanhamento técnico.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="services" aria-labelledby="servicos-titulo">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div><p class="eyebrow">Soluções sob medida</p><h2 id="servicos-titulo">O mesmo sistema, diferentes possibilidades.</h2></div>
+          <p>Projetamos cada solução de acordo com a necessidade do cliente, usando componentes industrializados para ganhar velocidade, precisão e qualidade.</p>
+        </div>
+        <div class="service-grid">
+          <a class="service-card reveal" href="./casas/" aria-label="Conhecer nossas soluções para casas">
+            <img src="https://static.wixstatic.com/media/05cb94_21a000d18db3417697f192b743e722a1~mv2.jpeg/v1/fill/w_900,h_700,al_c,q_88,enc_auto/05cb94_21a000d18db3417697f192b743e722a1~mv2.jpeg" alt="Ambiente interno de uma residência contemporânea" loading="lazy">
+            <div class="service-content"><span class="service-number">01</span><h3>Casas</h3><p>Residências confortáveis, resistentes e com liberdade de acabamento.</p></div>
+          </a>
+          <article class="service-card reveal">
+            <img src="https://static.wixstatic.com/media/05cb94_82f6bef29907494b873133f37eb55bc1~mv2.jpg/v1/fill/w_900,h_700,al_c,q_88,enc_auto/05cb94_82f6bef29907494b873133f37eb55bc1~mv2.jpg" alt="Casa de campo construída com sistema industrializado" loading="lazy">
+            <div class="service-content"><span class="service-number">02</span><h3>Escritórios</h3><p>Espaços profissionais com montagem ágil e excelente desempenho.</p></div>
+          </article>
+          <article class="service-card reveal">
+            <img src="https://static.wixstatic.com/media/05cb94_70ee89c8b96643cd8e46d715cf9b5f15~mv2.jpg/v1/fill/w_900,h_700,al_c,q_88,enc_auto/05cb94_70ee89c8b96643cd8e46d715cf9b5f15~mv2.jpg" alt="Obra executada com componentes de concreto" loading="lazy">
+            <div class="service-content"><span class="service-number">03</span><h3>Peças especiais</h3><p>Componentes desenvolvidos para demandas específicas de cada obra.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="system" id="sistema" aria-labelledby="sistema-titulo">
+      <div class="container system-grid">
+        <div class="image-stack reveal">
+          <img class="main-image" src="https://static.wixstatic.com/media/05cb94_351ceb837cfb41aeb192645bff6dd71e~mv2.jpg/v1/fill/w_900,h_1100,al_c,q_88,enc_auto/05cb94_351ceb837cfb41aeb192645bff6dd71e~mv2.jpg" alt="Painéis de concreto durante a montagem da obra" loading="lazy">
+          <img class="small-image" src="https://static.wixstatic.com/media/05cb94_774741d2d71c4d72be28ab169f061845~mv2.jpeg/v1/fill/w_760,h_600,al_c,q_88,enc_auto/05cb94_774741d2d71c4d72be28ab169f061845~mv2.jpeg" alt="Estrutura em concreto industrializado em execução" loading="lazy">
+        </div>
+        <div class="system-copy reveal">
+          <p class="eyebrow">Por que escolher nosso sistema</p>
+          <h2 id="sistema-titulo">Mais controle da fábrica até o canteiro.</h2>
+          <p>Os painéis e lajes são produzidos com precisão em ambiente protegido. Enquanto os componentes são fabricados, outros serviços avançam na obra. O resultado é um processo mais limpo, previsível e rápido.</p>
+          <div class="benefit-list">
+            <div class="benefit"><strong><span>01</span> Menos desperdício</strong><p>Medidas precisas reduzem perdas de material e retrabalho.</p></div>
+            <div class="benefit"><strong><span>02</span> Menos dependência</strong><p>O sistema exige menos horas improdutivas de mão de obra.</p></div>
+            <div class="benefit"><strong><span>03</span> Menor impacto do clima</strong><p>Grande parte da produção acontece em ambiente protegido.</p></div>
+            <div class="benefit"><strong><span>04</span> Instalações planejadas</strong><p>Elétrica e hidráulica são previstas desde a fabricação.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="performance" id="desempenho" aria-labelledby="desempenho-titulo">
+      <div class="container">
+        <div class="performance-top reveal">
+          <div><p class="eyebrow">Desempenho que permanece</p><h2 id="desempenho-titulo">Uma construção pensada para hoje e para muitos anos.</h2></div>
+          <p>As paredes de concreto oferecem estabilidade, resistência e baixa necessidade de manutenção, além de contribuírem para o conforto do imóvel.</p>
+        </div>
+        <div class="performance-grid">
+          <article class="performance-card reveal"><svg class="performance-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><path d="M24 6v21m0 0a8 8 0 1 0 0 16 8 8 0 0 0 0-16Z"/><path d="M19 12h5m-5 7h5"/></svg><h3>Conforto térmico</h3><p>O concreto ajuda a manter a temperatura interna mais estável.</p></article>
+          <article class="performance-card reveal"><svg class="performance-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 28h7l9 8V12l-9 8H8v8Z"/><path d="M32 19c3 3 3 7 0 10m5-15c6 6 6 15 0 21"/></svg><h3>Desempenho acústico</h3><p>Painéis robustos proporcionam isolamento conforme os critérios do projeto.</p></article>
+          <article class="performance-card reveal"><svg class="performance-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 39h32M12 39V18l12-9 12 9v21"/><path d="m18 29 4 4 9-11"/></svg><h3>Resistência</h3><p>Estrutura preparada para impactos e condições climáticas severas.</p></article>
+          <article class="performance-card reveal"><svg class="performance-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><path d="M26 6c2 8-5 10-1 17 2-4 7-5 8-10 6 7 9 13 6 21-4 10-20 11-27 2-6-8-1-17 5-22 0 7 2 10 5 11-2-8 3-12 4-19Z"/></svg><h3>Segurança ao fogo</h3><p>O concreto apresenta elevada resistência e reduz a propagação das chamas.</p></article>
+          <article class="performance-card reveal"><svg class="performance-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 8h22v32H13zM19 15h10M19 23h10M19 31h6"/></svg><h3>Baixa manutenção</h3><p>Superfícies duráveis aumentam os intervalos entre reparos e pinturas.</p></article>
+          <article class="performance-card reveal"><svg class="performance-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><path d="M24 5 39 11v11c0 10-6 17-15 21C15 39 9 32 9 22V11l15-6Z"/><path d="m17 24 5 5 10-12"/></svg><h3>Proteção patrimonial</h3><p>Paredes sólidas elevam a segurança e a resistência do imóvel.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects" id="obras" aria-labelledby="obras-titulo">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div><p class="eyebrow">Obras executadas</p><h2 id="obras-titulo">O sistema na prática.</h2></div>
+          <p>Registros reais da montagem dos painéis, do avanço estrutural e da precisão alcançada no canteiro.</p>
+        </div>
+        <div class="project-grid">
+          <figure class="project reveal"><img src="https://static.wixstatic.com/media/05cb94_daf000ebe65e43d390023034bc55c459~mv2.jpg/v1/fill/w_1000,h_1200,al_c,q_88,enc_auto/05cb94_daf000ebe65e43d390023034bc55c459~mv2.jpg" alt="Montagem de painéis de concreto em uma residência" loading="lazy"><figcaption class="project-label">Montagem dos painéis</figcaption></figure>
+          <figure class="project reveal"><img src="https://static.wixstatic.com/media/05cb94_0420c5e8ca1940c7990230c03fd33d0d~mv2.jpg/v1/fill/w_900,h_600,al_c,q_88,enc_auto/05cb94_0420c5e8ca1940c7990230c03fd33d0d~mv2.jpg" alt="Estrutura de obra executada com concreto industrializado" loading="lazy"><figcaption class="project-label">Estrutura em execução</figcaption></figure>
+          <figure class="project reveal"><img src="https://static.wixstatic.com/media/05cb94_a03a35bccd0848b9b0195d3572a1b7a2~mv2.jpg/v1/fill/w_900,h_700,al_c,q_88,enc_auto/05cb94_a03a35bccd0848b9b0195d3572a1b7a2~mv2.jpg" alt="Detalhes da parede de concreto em uma obra" loading="lazy"><figcaption class="project-label">Precisão nos detalhes</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials" aria-labelledby="depoimentos-titulo">
+      <div class="container">
+        <p class="eyebrow reveal">Experiência de quem contratou</p>
+        <h2 id="depoimentos-titulo" class="reveal">Clientes satisfeitos com o resultado.</h2>
+        <div class="quote-grid">
+          <blockquote class="quote reveal"><span class="quote-mark" aria-hidden="true">“</span><p>Contratei várias obras com a empresa e estou muito satisfeito. A equipe foi profissional e entregou um trabalho de alta qualidade.</p><footer>Eng. Maurício Dinardi</footer></blockquote>
+          <blockquote class="quote reveal"><span class="quote-mark" aria-hidden="true">“</span><p>Minha experiência com a construção em painéis e lajes de concreto foi muito boa, com ótima qualidade e prazo.</p><footer>Eng. Marcos Hozmann</footer></blockquote>
+          <blockquote class="quote reveal"><span class="quote-mark" aria-hidden="true">“</span><p>Possuo um edifício há vários anos e a manutenção é mínima. O conforto e a segurança atenderam às minhas expectativas.</p><footer>Antonio Janegitz, Usinagem</footer></blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section class="director" id="diretor" aria-labelledby="diretor-titulo">
+      <div class="container director-grid">
+        <aside class="director-card reveal"><div class="director-monogram" aria-hidden="true">SA</div><h3>Dr. Sério Albuquerque</h3><p>Diretor técnico</p></aside>
+        <div class="reveal">
+          <p class="eyebrow">Conhecimento técnico</p>
+          <h2 id="diretor-titulo">Engenharia apoiada por experiência e pesquisa.</h2>
+          <div class="credential-list">
+            <div class="credential"><strong>Doutorado pela USP</strong><p>Especialista em Tecnologia Nuclear, com pesquisas sobre concretos de elevada densidade e atenuação de radiações.</p></div>
+            <div class="credential"><strong>Mestrado pelo IPT</strong><p>Especialista em Tecnologia de Edificações, desempenho termoenergético, comportamento ao fogo, fundações e sistemas construtivos.</p></div>
+            <div class="credential"><strong>Experiência em grandes obras</strong><p>Atuação em infraestrutura, edifícios, reservatórios, galpões industriais, projetos estruturais e fábricas de pré-fabricados.</p></div>
+            <div class="credential"><strong>Casas de concreto de alta qualidade</strong><p>Aplicação de tecnologia industrializada para alcançar acabamento, durabilidade e desempenho estrutural.</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="container brand-history reveal">
+        <div class="brand-history-heading">
+          <h3>Grandes marcas que fazem parte do histórico do nosso diretor técnico.</h3>
+          <p>Experiência construída em projetos e trabalhos realizados para empresas reconhecidas em diferentes setores.</p>
+        </div>
+        <div class="logo-grid" aria-label="Empresas presentes no histórico profissional do diretor técnico">
+          <div class="logo-card"><img src="./assets/brands/sercomtel.webp" alt="Sercomtel" loading="lazy"></div>
+          <div class="logo-card"><img src="./assets/brands/sabesp.webp" alt="Sabesp" loading="lazy"></div>
+          <div class="logo-card"><img src="./assets/brands/sanepar.webp" alt="Sanepar" loading="lazy"></div>
+          <div class="logo-card"><img src="./assets/brands/copel.webp" alt="Copel" loading="lazy"></div>
+          <div class="logo-card"><img src="./assets/brands/kaiser.webp" alt="Kaiser" loading="lazy"></div>
+          <div class="logo-card"><img src="./assets/brands/coca-cola.webp" alt="Coca-Cola" loading="lazy"></div>
+          <div class="logo-card"><img src="./assets/brands/lca-alimentos.webp" alt="LCA Alimentos" loading="lazy"></div>
+          <div class="logo-card"><img src="./assets/brands/novonor-odebrecht.webp" alt="Novonor Odebrecht" loading="lazy"></div>
+          <div class="logo-card"><img src="./assets/brands/klabin.webp" alt="Klabin" loading="lazy"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contato" aria-labelledby="contato-titulo">
+      <div class="container contact-box">
+        <div class="contact-copy reveal"><p class="eyebrow">Seu projeto começa com uma conversa</p><h2 id="contato-titulo">Conte o que você pretende construir.</h2><p>Com algumas informações básicas, nossa equipe já consegue entender o momento do seu projeto e orientar os próximos passos, sem compromisso.</p><div class="contact-actions"><a class="button button-primary" href="https://wa.me/5543999936431?text=Ol%C3%A1%2C%20gostaria%20de%20conversar%20sobre%20meu%20projeto." target="_blank" rel="noopener">Chamar no WhatsApp</a><a class="button button-ghost" href="mailto:sa@casasdealtaqualidade.com">Enviar e-mail</a></div></div>
+        <div class="question-list reveal" aria-label="Informações úteis para o primeiro contato"><span>Qual é a dimensão aproximada da obra?</span><span>O terreno já foi definido?</span><span>Você já possui um projeto?</span><span>Quando pretende iniciar a construção?</span></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container footer-inner"><span>© <span id="year"></span> Rapidez, Custo e Qualidade.</span><span><a href="mailto:sa@casasdealtaqualidade.com">sa@casasdealtaqualidade.com</a> · <a href="tel:+5543999936431">(43) 99993-6431</a></span></div></footer>
+  <a class="whatsapp-float" href="https://wa.me/5543999936431?text=Ol%C3%A1%2C%20gostaria%20de%20conversar%20sobre%20meu%20projeto." target="_blank" rel="noopener" aria-label="Conversar pelo WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.52 3.48A11.9 11.9 0 0 0 12.07 0C5.5 0 .16 5.34.16 11.91c0 2.1.55 4.15 1.59 5.96L.06 24l6.28-1.65a11.9 11.9 0 0 0 5.72 1.46h.01c6.57 0 11.91-5.34 11.91-11.91 0-3.18-1.23-6.17-3.46-8.42ZM12.07 21.8h-.01a9.86 9.86 0 0 1-5.03-1.38l-.36-.21-3.73.98 1-3.63-.24-.37a9.85 9.85 0 0 1-1.52-5.28c0-5.46 4.44-9.9 9.9-9.9a9.82 9.82 0 0 1 7 2.9 9.83 9.83 0 0 1 2.9 7c-.01 5.45-4.45 9.89-9.91 9.89Zm5.43-7.42c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.48a9 9 0 0 1-1.66-2.07c-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.91-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.21 5.1 4.5.71.31 1.27.49 1.7.63.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2.01-1.41.25-.7.25-1.3.17-1.42-.07-.13-.27-.2-.57-.35Z"/></svg></a>
+
+  <script>
+    const menuButton = document.querySelector('.menu-button');
+    const navLinks = document.querySelector('.nav-links');
+    menuButton.addEventListener('click', () => {
+      const open = navLinks.classList.toggle('open');
+      menuButton.setAttribute('aria-expanded', String(open));
+      menuButton.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
+    });
+    navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      menuButton.setAttribute('aria-expanded', 'false');
+      menuButton.setAttribute('aria-label', 'Abrir menu');
+    }));
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const reveals = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      const observer = new IntersectionObserver(entries => entries.forEach(entry => {
+        if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+      }), { threshold: .1 });
+      reveals.forEach(el => observer.observe(el));
+    } else {
+      reveals.forEach(el => el.classList.add('visible'));
+    }
+  </script>
+</body>
+</html>
